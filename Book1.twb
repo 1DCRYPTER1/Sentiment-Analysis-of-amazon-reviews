@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0420.1112                               -->
+<workbook original-version='18.1' source-build='2021.1.1 (20211.21.0420.1112)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Mind_Body_Spirits_Books' inline='true' name='federated.1sqrxw61cmc7cx165znay1849ggd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Mind_Body_Spirits_Books' name='textscan.1teeetq15zxp0k1cwnekj1qyk0k4'>
+            <connection class='textscan' directory='C:/Users/Shaun Dsilva/Desktop/SEM 8/R/Amazon Reviews' filename='Mind_Body_Spirits_Books.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1teeetq15zxp0k1cwnekj1qyk0k4' name='Mind_Body_Spirits_Books.csv' table='[Mind_Body_Spirits_Books#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='score' ordinal='1' />
+            <column datatype='string' name='Book' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1teeetq15zxp0k1cwnekj1qyk0k4' name='Mind_Body_Spirits_Books.csv' table='[Mind_Body_Spirits_Books#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='score' ordinal='1' />
+            <column datatype='string' name='Book' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Mind_Body_Spirits_Books.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Mind_Body_Spirits_Books.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[score]</local-name>
+            <parent-name>[Mind_Body_Spirits_Books.csv]</parent-name>
+            <remote-alias>score</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Book</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Book]</local-name>
+            <parent-name>[Mind_Body_Spirits_Books.csv]</parent-name>
+            <remote-alias>Book</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Number of Records' datatype='integer' name='[Calculation_406731381026385922]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='12801' />
+      </column>
+      <column aggregation='None' caption='Score (bin)' datatype='integer' name='[Score (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[score]' peg='0' size='2' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Mind_Body_Spirits_Books.csv' datatype='table' name='[__tableau_internal_object_id__].[Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E]' role='measure' type='quantitative' />
+      <column caption='Score' datatype='integer' name='[score]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Shaun Dsilva/Desktop/SEM 8/R/Amazon Reviews/Mind_Body_Spirits_Books.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/06/2021 11:15:44 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Mind_Body_Spirits_Books' increment-value='%null%' refresh-type='create' rows-inserted='12801' timestamp-start='2021-05-06 11:15:44.348' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Mind_Body_Spirits_Books.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12801</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Mind_Body_Spirits_Books.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Book</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Book]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Book</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Mind_Body_Spirits_Books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Mind_Body_Spirits_Books.csv' id='Mind_Body_Spirits_Books.csv_23686CBF727B44ACAFEB6F04E703067E'>
+            <properties context=''>
+              <relation connection='textscan.1teeetq15zxp0k1cwnekj1qyk0k4' name='Mind_Body_Spirits_Books.csv' table='[Mind_Body_Spirits_Books#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='score' ordinal='1' />
+                  <column datatype='string' name='Book' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Mind_Body_Spirits_Books' name='federated.1sqrxw61cmc7cx165znay1849ggd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sqrxw61cmc7cx165znay1849ggd'>
+            <column datatype='string' name='[Book]' role='dimension' type='nominal' />
+            <column caption='Number of Records' datatype='integer' name='[Calculation_406731381026385922]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='12801' />
+            </column>
+            <column aggregation='None' caption='Score (bin)' datatype='integer' name='[Score (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[score]' peg='0' size='2' />
+            </column>
+            <column-instance column='[score]' derivation='Count' name='[cnt:score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Book]' derivation='None' name='[none:Book:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Score (bin)]' derivation='None' name='[none:Score (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Score' datatype='integer' name='[score]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_406731381026385922]' derivation='Sum' name='[sum:Calculation_406731381026385922:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Book:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Book:nk]' member='&quot;Death&quot;' />
+              <groupfilter function='member' level='[none:Book:nk]' member='&quot;Ikigai&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Book:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Score (bin):qk]' field-type='quantitative' max='17' min='-6' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1sqrxw61cmc7cx165znay1849ggd].[cnt:score:qk]' field-type='quantitative' max='3272' min='-442' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <lod column='[federated.1sqrxw61cmc7cx165znay1849ggd].[sum:Calculation_406731381026385922:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0' />
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1sqrxw61cmc7cx165znay1849ggd].[cnt:score:qk]</rows>
+        <cols>[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Score (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.1sqrxw61cmc7cx165znay1849ggd].[Score (bin) 2]</column>
+          <column>[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Score (bin):qk]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{B6D71653-55EB-4A0C-945A-B8D8A5C80C2A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='292'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Book:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Book:nk]</field>
+            <field>[federated.1sqrxw61cmc7cx165znay1849ggd].[none:Score (bin):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{585B3FB8-0910-4558-90FC-EBB88B196F9C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
