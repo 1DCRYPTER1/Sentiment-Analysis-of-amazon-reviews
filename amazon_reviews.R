@@ -24,7 +24,7 @@ dim(reviews)
 corpus <- iconv(reviews$text)
 corpus <- Corpus(VectorSource(corpus))
 
-inspect(corpus[1:5])
+inspect(corpus[1:6])
 
 corpus <- tm_map(corpus,tolower)
 
@@ -34,7 +34,7 @@ corpus <- tm_map(corpus, removeNumbers)
 
 corpus <- tm_map(corpus, removeWords, stopwords("english"))
 
-corpus <- tm_map(corpus, removeWords, c("given","bought","read","book","important","flow","ikigai","find","meaning"))
+corpus <- tm_map(corpus, removeWords, c("bought","read","book","important","flow","find","meaning"))
 
 corpus <- tm_map(corpus, stripWhitespace)
 
@@ -52,7 +52,7 @@ tdm[1:10,1:5]
 #Barplots ke liye
 w <- rowSums(tdm)
 w <- subset(w, w>=25)
-barplot(w, las = 2, col = "blue")
+barplot(w, las = 2, col = "red")
 
 #Wordcloud ke liye 
 w <- sort(rowSums(tdm), decreasing = T)
